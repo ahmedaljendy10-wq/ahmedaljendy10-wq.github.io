@@ -111,6 +111,23 @@ h2{font-size:clamp(1.9rem,4vw,2.7rem);color:var(--head)}
 .curr li.soon{border-style:dashed;border-color:var(--gold);color:var(--gold);font-weight:600}
 .cnote{font-size:.85rem;opacity:.75;margin:12px 0 0}
 .ppoints{margin:20px 0;padding-inline-start:20px;line-height:2}
+.fwrap{max-width:560px;margin:32px auto 0;text-align:start}
+.fcard{position:relative;background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:14px;padding:22px 22px 18px;display:grid;gap:14px}
+.fcard h3{margin:0;color:var(--head)}
+.fld{display:grid;gap:6px;font-weight:500}
+.fld input,.fld textarea{font:inherit;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:10px 12px;width:100%}
+.fld input:focus,.fld textarea:focus{outline:3px solid var(--gold-bright);outline-offset:1px}
+.hp{position:absolute;inset-block-start:0;inset-inline-start:0;width:1px;height:1px;opacity:0;pointer-events:none;clip-path:inset(50%)}
+.chk{display:flex;gap:10px;align-items:flex-start;line-height:1.6}
+.chk input{margin-top:6px;width:18px;height:18px;flex:none}
+.fnote{margin:0;font-size:.85rem;color:var(--muted)}
+.fstatus{margin:0;font-weight:600;min-height:1.4em}
+.fstatus.ok{color:var(--head)}.fstatus.bad{color:#B3261E}
+.stars{display:inline-flex;flex-direction:row-reverse;justify-content:flex-end;direction:ltr;gap:2px}
+.stars input{position:absolute;opacity:0;width:1px;height:1px}
+.stars label{font-size:2rem;line-height:1;color:#9DB1AA;cursor:pointer;padding:2px}
+.stars input:checked~label,.stars label:hover,.stars label:hover~label{color:var(--gold-bright)}
+.stars input:focus-visible+label{outline:3px solid var(--gold-bright);border-radius:4px}
 .revs{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:24px}
 .rev{margin:0;background:var(--surface);border:1px solid var(--line);border-inline-start:4px solid var(--gold-bright);border-radius:12px;padding:18px 20px}
 .rev blockquote{margin:0 0 12px;line-height:1.9}
@@ -202,7 +219,7 @@ footer{background:var(--green);color:var(--on-green-muted);padding-block:22px;fo
 <body>
 <header class="bar"><div class="wrap">
   <a class="brand" href="#top">Ahmed Aljendy</a>
-  <nav class="nav" aria-label="Sections"><a href="#news">News</a><a href="#courses">Courses</a><a href="#private">Private lessons</a><a href="#videos">Videos</a><a href="#payment">How to pay</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+  <nav class="nav" aria-label="Sections"><a href="#news">News</a><a href="#courses">Courses</a><a href="#private">Private lessons</a><a href="#videos">Videos</a><a href="#reviews">Reviews</a><a href="#payment">How to pay</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
   <div class="bar-actions">
     <a class="chip" href="../index.html" hreflang="ar" lang="ar">العربية</a>
     <a class="btn btn-gold btn-sm" href="https://wa.me/201272766454?text=Hello%2C%20I%20would%20like%20to%20ask%20about%20the%20Al-Ajurrumiyyah%20course." target="_blank" rel="noopener">Book</a>
@@ -251,7 +268,7 @@ footer{background:var(--green);color:var(--on-green-muted);padding-block:22px;fo
     <div class="vid" id="vid" data-src="https://www.youtube-nocookie.com/embed/videoseries?list=UUtWHMUrqEwl31iuSPs_8fxA"><button class="vid-play" type="button"><i>▶</i><span>Watch the latest videos</span></button></div>
     <div class="vid-actions"><a class="btn btn-line" href="https://youtube.com/@ahmedaljendy" target="_blank" rel="noopener">Open the channel on YouTube</a></div>
   </div></section>
-
+<section id="reviews"><div class="wrap"><h2>Student reviews</h2><p class="lede">Your opinion matters to me. I review each one and publish it with your permission.</p><div class="fwrap"><form class="fcard" method="post" action="https://formspree.io/f/xkjrjlkq" data-ajax="1" data-ok="Your message has arrived, thank you. I will reply soon, God willing." data-err="Sending failed just now. You can message me on WhatsApp instead." data-sending="Sending…"><h3>Write a review</h3><input type="hidden" name="form_type" value="review"><input type="hidden" name="site_language" value="en"><input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="hp" aria-hidden="true"><label class="fld"><span>Name</span><input type="text" name="name" required ></label><label class="fld"><span>Country (optional)</span><input type="text" name="country" ></label><div class="fld"><span>Your rating</span><div class="stars"><input type="radio" id="st5" name="rating" value="5" required><label for="st5" title="5 stars">★</label><input type="radio" id="st4" name="rating" value="4" required><label for="st4" title="4 stars">★</label><input type="radio" id="st3" name="rating" value="3" required><label for="st3" title="3 stars">★</label><input type="radio" id="st2" name="rating" value="2" required><label for="st2" title="2 stars">★</label><input type="radio" id="st1" name="rating" value="1" required><label for="st1" title="1 stars">★</label></div></div><label class="fld"><span>Your experience studying with me</span><textarea name="review" rows="5" required></textarea></label><label class="fld"><span>Your email (optional, for contact only, never published)</span><input type="email" name="email" ></label><label class="chk"><input type="checkbox" name="consent" value="yes" required><span>I agree to the publication of my review and name as written, after review.</span></label><input type="hidden" name="_subject" value="New website review"><button class="btn btn-gold" type="submit">Send</button><p class="fnote">Your message is sent to my inbox through the Formspree service and is not published.</p><p class="fstatus" role="status"></p></form></div></div></section>
 
   <section id="payment"><div class="wrap">
     <h2>How to pay</h2>
@@ -282,6 +299,7 @@ footer{background:var(--green);color:var(--on-green-muted);padding-block:22px;fo
     <p class="copied" id="copied" role="status" data-msg="Copied"></p>
     <p class="social-label">Follow</p>
     <div class="social" style="margin-top:12px"><a class="btn btn-ghost btn-sm" href="https://www.facebook.com/share/1529opxWdyP/" target="_blank" rel="noopener">Facebook</a><a class="btn btn-ghost btn-sm" href="https://www.instagram.com/ahmadaljendy" target="_blank" rel="noopener">Instagram</a><a class="btn btn-ghost btn-sm" href="https://www.tiktok.com/@ahmadaljendy22" target="_blank" rel="noopener">TikTok</a><a class="btn btn-ghost btn-sm" href="https://youtube.com/@ahmedaljendy" target="_blank" rel="noopener">YouTube</a></div>
+    <div class="fwrap"><form class="fcard" method="post" action="https://formspree.io/f/xkjrjlkq" data-ajax="1" data-ok="Your message has arrived, thank you. I will reply soon, God willing." data-err="Sending failed just now. You can message me on WhatsApp instead." data-sending="Sending…"><h3>Send me a message</h3><input type="hidden" name="form_type" value="message"><input type="hidden" name="site_language" value="en"><input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="hp" aria-hidden="true"><label class="fld"><span>Name</span><input type="text" name="name" required ></label><label class="fld"><span>Your email</span><input type="email" name="email" required ></label><label class="fld"><span>Your message</span><textarea name="message" rows="5" required></textarea></label><input type="hidden" name="_subject" value="Website message"><button class="btn btn-gold" type="submit">Send</button><p class="fnote">Your message is sent to my inbox through the Formspree service and is not published.</p><p class="fstatus" role="status"></p></form></div>
   </div></section>
 </main>
 <footer><div class="wrap">© 2026 Ahmed Aljendy</div></footer>
@@ -319,6 +337,23 @@ footer{background:var(--green);color:var(--on-green-muted);padding-block:22px;fo
     if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(v).then(done,function(){sel(v.indexOf("@")>-1?"mail":"num");});}
     else{sel(v.indexOf("@")>-1?"mail":"num");}
   });}
+})();
+</script>
+<script>
+(function(){
+  var forms=document.querySelectorAll("form[data-ajax]");
+  Array.prototype.forEach.call(forms,function(f){
+    f.addEventListener("submit",function(ev){
+      ev.preventDefault();
+      var st=f.querySelector(".fstatus"), btn=f.querySelector("button[type=submit]");
+      st.className="fstatus"; st.textContent=f.getAttribute("data-sending"); btn.disabled=true;
+      fetch(f.action,{method:"POST",body:new FormData(f),headers:{"Accept":"application/json"}}).then(function(r){
+        if(r.ok){st.className="fstatus ok";st.textContent=f.getAttribute("data-ok");f.reset();}
+        else{st.className="fstatus bad";st.textContent=f.getAttribute("data-err");}
+        btn.disabled=false;
+      }).catch(function(){st.className="fstatus bad";st.textContent=f.getAttribute("data-err");btn.disabled=false;});
+    });
+  });
 })();
 </script>
 </body>
