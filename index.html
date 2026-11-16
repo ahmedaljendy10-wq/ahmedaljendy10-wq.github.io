@@ -101,6 +101,16 @@ section{padding-block:72px}
 h2{font-size:clamp(1.9rem,4vw,2.7rem);color:var(--head)}
 .lede{margin-top:14px;color:var(--muted);max-width:38em}
 
+.ptracks{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:24px}
+.ptrack{background:var(--bg);border:1px solid var(--line);border-inline-start:4px solid var(--gold-bright);border-radius:12px;padding:18px 20px}
+.ptrack h3{margin:0 0 8px;color:var(--head)}
+.ptrack p{margin:0;line-height:1.9}
+.ppoints{margin:20px 0;padding-inline-start:20px;line-height:2}
+.revs{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:24px}
+.rev{margin:0;background:var(--surface);border:1px solid var(--line);border-inline-start:4px solid var(--gold-bright);border-radius:12px;padding:18px 20px}
+.rev blockquote{margin:0 0 12px;line-height:1.9}
+.rev figcaption{font-weight:600;color:var(--head)}
+.rev figcaption span{display:block;font-weight:400;font-size:.9rem;opacity:.8}
 .news{list-style:none;margin:24px 0 0;padding:0;display:grid;gap:12px}
 .news li{display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:start;background:var(--bg);border:1px solid var(--line);border-inline-start:4px solid var(--gold-bright);border-radius:12px;padding:14px 18px}
 .news time{color:var(--gold);font-weight:600;font-size:.92rem;white-space:nowrap;padding-top:2px}
@@ -187,7 +197,7 @@ footer{background:var(--green);color:var(--on-green-muted);padding-block:22px;fo
 <body>
 <header class="bar"><div class="wrap">
   <a class="brand" href="#top">أحمد الجندي</a>
-  <nav class="nav" aria-label="Sections"><a href="#news">الإعلانات</a><a href="#courses">الدورات</a><a href="#videos">الفيديوهات</a><a href="#payment">طرق الدفع</a><a href="#about">نبذة</a><a href="#contact">تواصل</a></nav>
+  <nav class="nav" aria-label="Sections"><a href="#news">الإعلانات</a><a href="#courses">الدورات</a><a href="#private">الدروس الخاصة</a><a href="#videos">الفيديوهات</a><a href="#payment">طرق الدفع</a><a href="#about">نبذة</a><a href="#contact">تواصل</a></nav>
   <div class="bar-actions">
     <a class="chip" href="en/index.html" hreflang="en" lang="en">English</a>
     <a class="btn btn-gold btn-sm" href="https://wa.me/201272766454?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%A3%D9%88%D8%AF%D9%91%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%AF%D9%88%D8%B1%D8%A9%20%D8%A7%D9%84%D8%A3%D8%AC%D8%B1%D9%88%D9%85%D9%8A%D8%A9." target="_blank" rel="noopener">احجز</a>
@@ -228,6 +238,7 @@ footer{background:var(--green);color:var(--on-green-muted);padding-block:22px;fo
       <ol class="sched"><li><span class="n">١</span><span class="d"><b>السبت</b><small>٥ ديسمبر ٢٠٢٦</small></span></li><li><span class="n">٢</span><span class="d"><b>الخميس</b><small>١٠ ديسمبر ٢٠٢٦</small></span></li><li><span class="n">٣</span><span class="d"><b>السبت</b><small>١٢ ديسمبر ٢٠٢٦</small></span></li><li><span class="n">٤</span><span class="d"><b>الخميس</b><small>١٧ ديسمبر ٢٠٢٦</small></span></li><li><span class="n">٥</span><span class="d"><b>السبت</b><small>١٩ ديسمبر ٢٠٢٦</small></span></li><li><span class="n">٦</span><span class="d"><b>الخميس</b><small>٢٤ ديسمبر ٢٠٢٦</small></span></li><li><span class="n">٧</span><span class="d"><b>السبت</b><small>٢٦ ديسمبر ٢٠٢٦</small></span></li><li><span class="n">٨</span><span class="d"><b>الخميس</b><small>٣١ ديسمبر ٢٠٢٦</small></span></li><li><span class="n">٩</span><span class="d"><b>السبت</b><small>٢ يناير ٢٠٢٧</small></span></li><li><span class="n">١٠</span><span class="d"><b>الخميس</b><small>٧ يناير ٢٠٢٧</small></span></li><li><span class="n">١١</span><span class="d"><b>السبت</b><small>٩ يناير ٢٠٢٧</small></span></li><li><span class="n">١٢</span><span class="d"><b>الخميس</b><small>١٤ يناير ٢٠٢٧</small></span></li><li><span class="n">١٣</span><span class="d"><b>السبت</b><small>١٦ يناير ٢٠٢٧</small></span></li><li><span class="n">١٤</span><span class="d"><b>الخميس</b><small>٢١ يناير ٢٠٢٧</small></span></li><li><span class="n">١٥</span><span class="d"><b>السبت</b><small>٢٣ يناير ٢٠٢٧</small></span></li></ol>
       <p class="note">يلي آخر حصة امتحان على مجمل الكتاب، ويُعلن موعده لاحقًا.</p>
     </div></div></section>
+<section id="private" class="band"><div class="wrap"><h2>الدروس الخاصة</h2><p class="lede">مسارات فردية أو لمجموعات صغيرة، تُصمَّم على مستواك وهدفك.</p><div class="ptracks"><div class="ptrack"><h3>المنهج الكامل: «العربية بين يديك»</h3><p>مسار متكامل من الصفر على عشرة مستويات، بمتوسط ٢٥ ساعة للمستوى. مناسب لمن يريد تأسيسًا منظمًا في العربية.</p></div><div class="ptrack"><h3>دراسات خاصة</h3><p>النحو، والصرف، والبلاغة، والتفسير، بحسب هدفك ومستواك.</p></div></div><ul class="ppoints"><li>دروس فردية، أو لمجموعات صغيرة من الأصدقاء والزملاء</li><li>أونلاين، بشرح عربي وإنجليزي</li><li>المواعيد تُتفق عليها بحسب توقيتك</li></ul><p><a class="btn btn-gold" href="https://wa.me/201272766454?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%A3%D9%88%D8%AF%D9%91%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%A7%D9%84%D8%AF%D8%B1%D9%88%D8%B3%20%D8%A7%D9%84%D8%AE%D8%A7%D8%B5%D8%A9." target="_blank" rel="noopener">اسأل عن الدروس الخاصة</a></p></div></section>
 
   <section id="videos" class="band"><div class="wrap">
     <h2>فيديوهات من القناة</h2>
@@ -235,6 +246,7 @@ footer{background:var(--green);color:var(--on-green-muted);padding-block:22px;fo
     <div class="vid" id="vid" data-src="https://www.youtube-nocookie.com/embed/videoseries?list=UUtWHMUrqEwl31iuSPs_8fxA"><button class="vid-play" type="button"><i>▶</i><span>شاهد آخر الفيديوهات</span></button></div>
     <div class="vid-actions"><a class="btn btn-line" href="https://youtube.com/@ahmedaljendy" target="_blank" rel="noopener">افتح القناة على يوتيوب</a></div>
   </div></section>
+
 
   <section id="payment"><div class="wrap">
     <h2>طرق الدفع</h2>

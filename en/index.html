@@ -101,6 +101,16 @@ section{padding-block:72px}
 h2{font-size:clamp(1.9rem,4vw,2.7rem);color:var(--head)}
 .lede{margin-top:14px;color:var(--muted);max-width:38em}
 
+.ptracks{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:24px}
+.ptrack{background:var(--bg);border:1px solid var(--line);border-inline-start:4px solid var(--gold-bright);border-radius:12px;padding:18px 20px}
+.ptrack h3{margin:0 0 8px;color:var(--head)}
+.ptrack p{margin:0;line-height:1.9}
+.ppoints{margin:20px 0;padding-inline-start:20px;line-height:2}
+.revs{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:24px}
+.rev{margin:0;background:var(--surface);border:1px solid var(--line);border-inline-start:4px solid var(--gold-bright);border-radius:12px;padding:18px 20px}
+.rev blockquote{margin:0 0 12px;line-height:1.9}
+.rev figcaption{font-weight:600;color:var(--head)}
+.rev figcaption span{display:block;font-weight:400;font-size:.9rem;opacity:.8}
 .news{list-style:none;margin:24px 0 0;padding:0;display:grid;gap:12px}
 .news li{display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:start;background:var(--bg);border:1px solid var(--line);border-inline-start:4px solid var(--gold-bright);border-radius:12px;padding:14px 18px}
 .news time{color:var(--gold);font-weight:600;font-size:.92rem;white-space:nowrap;padding-top:2px}
@@ -187,7 +197,7 @@ footer{background:var(--green);color:var(--on-green-muted);padding-block:22px;fo
 <body>
 <header class="bar"><div class="wrap">
   <a class="brand" href="#top">Ahmed Aljendy</a>
-  <nav class="nav" aria-label="Sections"><a href="#news">News</a><a href="#courses">Courses</a><a href="#videos">Videos</a><a href="#payment">How to pay</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+  <nav class="nav" aria-label="Sections"><a href="#news">News</a><a href="#courses">Courses</a><a href="#private">Private lessons</a><a href="#videos">Videos</a><a href="#payment">How to pay</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
   <div class="bar-actions">
     <a class="chip" href="../index.html" hreflang="ar" lang="ar">العربية</a>
     <a class="btn btn-gold btn-sm" href="https://wa.me/201272766454?text=Hello%2C%20I%20would%20like%20to%20ask%20about%20the%20Al-Ajurrumiyyah%20course." target="_blank" rel="noopener">Book</a>
@@ -228,6 +238,7 @@ footer{background:var(--green);color:var(--on-green-muted);padding-block:22px;fo
       <ol class="sched"><li><span class="n">1</span><span class="d"><b>Saturday</b><small>5 December 2026</small></span></li><li><span class="n">2</span><span class="d"><b>Thursday</b><small>10 December 2026</small></span></li><li><span class="n">3</span><span class="d"><b>Saturday</b><small>12 December 2026</small></span></li><li><span class="n">4</span><span class="d"><b>Thursday</b><small>17 December 2026</small></span></li><li><span class="n">5</span><span class="d"><b>Saturday</b><small>19 December 2026</small></span></li><li><span class="n">6</span><span class="d"><b>Thursday</b><small>24 December 2026</small></span></li><li><span class="n">7</span><span class="d"><b>Saturday</b><small>26 December 2026</small></span></li><li><span class="n">8</span><span class="d"><b>Thursday</b><small>31 December 2026</small></span></li><li><span class="n">9</span><span class="d"><b>Saturday</b><small>2 January 2027</small></span></li><li><span class="n">10</span><span class="d"><b>Thursday</b><small>7 January 2027</small></span></li><li><span class="n">11</span><span class="d"><b>Saturday</b><small>9 January 2027</small></span></li><li><span class="n">12</span><span class="d"><b>Thursday</b><small>14 January 2027</small></span></li><li><span class="n">13</span><span class="d"><b>Saturday</b><small>16 January 2027</small></span></li><li><span class="n">14</span><span class="d"><b>Thursday</b><small>21 January 2027</small></span></li><li><span class="n">15</span><span class="d"><b>Saturday</b><small>23 January 2027</small></span></li></ol>
       <p class="note">A final exam on the whole book follows the last session; its date will be announced later.</p>
     </div></div></section>
+<section id="private" class="band"><div class="wrap"><h2>Private lessons</h2><p class="lede">One-to-one or small-group paths, shaped around your level and your goal.</p><div class="ptracks"><div class="ptrack"><h3>The full curriculum: “Al-Arabiyya Bayna Yadayk”</h3><p>A complete path from zero across ten levels, about 25 hours per level. Ideal for anyone who wants a structured foundation in Arabic.</p></div><div class="ptrack"><h3>Focused studies</h3><p>Grammar (nahw), morphology (sarf), rhetoric (balagha) and tafsir, according to your goal and level.</p></div></div><ul class="ppoints"><li>One to one, or small groups of friends and colleagues</li><li>Online, explained in Arabic and English</li><li>Times arranged to suit your time zone</li></ul><p><a class="btn btn-gold" href="https://wa.me/201272766454?text=Hello%2C%20I%20would%20like%20to%20ask%20about%20private%20lessons." target="_blank" rel="noopener">Ask about private lessons</a></p></div></section>
 
   <section id="videos" class="band"><div class="wrap">
     <h2>Videos from the channel</h2>
@@ -235,6 +246,7 @@ footer{background:var(--green);color:var(--on-green-muted);padding-block:22px;fo
     <div class="vid" id="vid" data-src="https://www.youtube-nocookie.com/embed/videoseries?list=UUtWHMUrqEwl31iuSPs_8fxA"><button class="vid-play" type="button"><i>▶</i><span>Watch the latest videos</span></button></div>
     <div class="vid-actions"><a class="btn btn-line" href="https://youtube.com/@ahmedaljendy" target="_blank" rel="noopener">Open the channel on YouTube</a></div>
   </div></section>
+
 
   <section id="payment"><div class="wrap">
     <h2>How to pay</h2>
