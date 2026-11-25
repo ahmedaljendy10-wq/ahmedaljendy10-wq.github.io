@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>اختبار تحديد المستوى | أحمد الجندي</title>
+<meta name="theme-color" content="#0D4636">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
+<style>
+:root{--bg:#F2F6F3;--surface:#fff;--ink:#0F2420;--muted:#4B605A;--line:#D3DFD8;--green:#0D4636;--ok:#0D6B3A;--bad:#B3261E;--gold:#D7B45B}
+@media (prefers-color-scheme:dark){:root{--bg:#07151A;--surface:#0E2128;--ink:#E7EFEB;--muted:#9BB1AA;--line:#1D3A41;--green:#D7B45B;--ok:#6FD39A;--bad:#FF8F85}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"IBM Plex Sans Arabic","Noto Sans Arabic","Segoe UI",system-ui,sans-serif;font-size:18px;line-height:1.7}
+.wrap{max-width:720px;margin:0 auto;padding:24px 16px 64px}
+h1{font-family:"Amiri",serif;font-size:2rem;margin:8px 0 4px;color:var(--green);line-height:1.3}
+.sub{color:var(--muted);margin:0 0 20px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px}
+.fld{display:grid;gap:6px;margin-bottom:14px}.fld span{font-weight:600}
+.fld input{font:inherit;padding:10px 12px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);width:100%}
+.chk{display:flex;gap:10px;align-items:flex-start;margin:6px 0 16px}.chk input{margin-top:7px;width:18px;height:18px}
+.btn{font:inherit;font-weight:600;cursor:pointer;border:0;border-radius:10px;padding:12px 26px;background:var(--green);color:#fff;min-height:48px}
+@media (prefers-color-scheme:dark){.btn{color:#0B2A22}}
+.btn[disabled]{opacity:.5;cursor:not-allowed}
+.hp{position:absolute;inset-inline-start:-9999px;width:1px;height:1px;opacity:0}
+.prog{display:flex;justify-content:space-between;color:var(--muted);font-size:.95rem;margin-bottom:8px}
+.bar{height:8px;background:var(--line);border-radius:99px;overflow:hidden;margin-bottom:18px}.bar i{display:block;height:100%;background:var(--green);width:0;transition:width .3s}
+.sec{font-weight:600;color:var(--green);margin-bottom:6px}
+fieldset{border:0;margin:0;padding:0}
+legend{padding:0;font-size:1.25rem;font-weight:600;line-height:1.7;margin-bottom:4px}
+.en{color:var(--muted);font-size:1rem;direction:ltr;text-align:left;margin:0 0 14px}
+.opts{display:grid;gap:10px}
+.opt{display:flex;align-items:center;gap:12px;border:2px solid var(--line);border-radius:10px;padding:10px 14px;cursor:pointer;min-height:52px;font-size:1.3rem}
+.opt input{width:20px;height:20px;flex:none}
+.opt.lat{direction:ltr}
+.opt:has(input:checked){border-color:var(--green)}
+.opt.right{border-color:var(--ok);background:color-mix(in srgb,var(--ok) 12%,transparent)}
+.opt.wrong{border-color:var(--bad);background:color-mix(in srgb,var(--bad) 12%,transparent)}
+.mark{margin-inline-start:auto;font-weight:700;font-size:1rem}
+.fb{margin:16px 0 0;font-weight:600;min-height:1.7em}.fb.ok{color:var(--ok)}.fb.bad{color:var(--bad)}
+.row{display:flex;gap:12px;margin-top:18px;flex-wrap:wrap}
+.score{font-family:"Amiri",serif;font-size:3rem;color:var(--green);margin:4px 0;direction:ltr;text-align:start;unicode-bidi:isolate}
+table{width:100%;border-collapse:collapse;margin:14px 0}td{padding:8px 4px;border-bottom:1px solid var(--line)}td:last-child{text-align:end;font-weight:600;white-space:nowrap;direction:ltr;unicode-bidi:isolate}
+.note{color:var(--muted);font-size:.95rem}
+.st{font-weight:600;min-height:1.6em}.st.bad{color:var(--bad)}
+a{color:var(--green)}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+[hidden]{display:none!important}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>اختبار تحديد المستوى</h1>
+<p class="sub">٢٠ سؤالًا<br><span dir="ltr" style="unicode-bidi:isolate">Level placement test &middot; 20 questions</span></p>
+
+<section id="s1" class="card">
+<form id="f0" autocomplete="on">
+<label class="fld"><span>الاسم الكامل (Full Name)</span><input id="name" type="text" required autocomplete="name"></label>
+<label class="fld"><span>البريد الإلكتروني أو واتساب (Email / WhatsApp)</span><input id="contact" type="text" required autocomplete="email"></label>
+<label class="fld"><span>البلد (Country)</span><input id="country" type="text" autocomplete="country-name"></label>
+<input type="text" id="gotcha" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+<label class="chk"><input id="consent" type="checkbox" required><span>أوافق أن تُستخدم بياناتي ونتيجتي للتواصل معي بشأن مستواي فقط.<br><span class="note">I agree that my details and result may be used to contact me about my level only.</span></span></label>
+<button class="btn" type="submit">ابدأ الاختبار &middot; Start</button>
+</form>
+</section>
+
+<section id="s2" class="card" hidden>
+<div class="prog"><span id="pn"></span><span id="ps"></span></div>
+<div class="bar" aria-hidden="true"><i id="pb"></i></div>
+<div class="sec" id="sec"></div>
+<fieldset id="qbox"><legend id="qt"></legend><p class="en" id="qe"></p><div class="opts" id="opts"></div></fieldset>
+<p class="fb" id="fb" role="status" aria-live="polite"></p>
+<div class="row"><button class="btn" id="chk" type="button">تحقّق &middot; Check</button><button class="btn" id="nx" type="button" hidden>التالي &middot; Next</button></div>
+</section>
+
+<section id="s3" class="card" hidden aria-live="polite">
+<p>درجتك &middot; Your score</p>
+<div class="score" id="sc"></div>
+<table id="tb"></table>
+<p>شكرًا لك. سأتواصل معك لنتفق على المستوى المناسب لك.<br><span class="note">Thank you. I will contact you to agree on the level that suits you.</span></p>
+<p class="st" id="st" role="status"></p>
+<div class="row" id="retry" hidden><button class="btn" id="rb" type="button">إعادة المحاولة &middot; Try again</button></div>
+</section>
+</div>
+
+<script>
+var D={"secs": ["الحُرُوفُ وَأَشْكَالُهَا", "الحَرَكَاتُ القَصِيرَةُ وَالسُّكُونُ وَالمُدُودُ", "الشَّدَّةُ وَالتَّنْوِينُ وَاللَّامُ الشَّمْسِيَّةُ وَالقَمَرِيَّةُ", "تَمْيِيزُ الكَلِمَاتِ وَقِرَاءَةُ الجُمَلِ القَصِيرَةِ"], "qs": [{"ar": "أَيُّ كَلِمَةٍ تَحْتَوِي عَلَى حَرْفِ (ع)؟", "en": "Which word contains the letter ع?", "o": ["فَتَحَ", "سَمِعَ", "غَسَلَ", "قَرَأَ"], "a": 1, "s": 0}, {"ar": "أَيُّ كَلِمَةٍ تَحْتَوِي عَلَى حَرْفِ (هـ)؟", "en": "Which word contains the letter هـ?", "o": ["نَهْرٌ", "بَحْرٌ", "مَطَرٌ", "قَمَرٌ"], "a": 0, "s": 0}, {"ar": "مَا التَّرْكِيبُ الصَّحِيحُ لِلْحُرُوفِ: (ي + ك + ت + ب)؟", "en": "Which word is formed by connecting: ي + ك + ت + ب?", "o": ["نَكْتُبُ", "يَكْتُبُ", "تَكْتُبُ", "يَبْتُكُ"], "a": 1, "s": 0}, {"ar": "مَا الحُرُوفُ المُكَوِّنَةُ لِكَلِمَةِ (بَيْتٌ)؟", "en": "Which letters make up the word بَيْتٌ?", "o": ["ب + ن + ت", "ت + ي + ب", "ب + ي + ت", "ن + ي + ت"], "a": 2, "s": 0}, {"ar": "أَيُّ حَرْفٍ مِنَ الحُرُوفِ التَّالِيَةِ لَا يَتَّصِلُ بِمَا بَعْدَهُ؟", "en": "Which of the following letters does NOT connect to the letter after it?", "o": ["م", "ك", "س", "د"], "a": 3, "s": 0}, {"ar": "كَيْفَ تُنْطَقُ كَلِمَةُ (كَتَبَ)؟", "en": "How is the word كَتَبَ pronounced?", "o": ["Ku-ti-ba", "Ka-ta-ba", "Ki-taa-ba", "Ka-ti-ba"], "a": 1, "s": 1}, {"ar": "كَيْفَ تُنْطَقُ كَلِمَةُ (شَرِبَ)؟", "en": "How is the word شَرِبَ pronounced?", "o": ["Sha-ra-ba", "Shu-ri-ba", "Sha-ri-ba", "Shi-ra-ba"], "a": 2, "s": 1}, {"ar": "أَيُّ كَلِمَةٍ تَحْتَوِي عَلَى حَرْفٍ سَاكِنٍ (سُكُونٍ)؟ (Which word contains a Sukun (ْ)?)", "en": "", "o": ["مَسْجِدٌ", "قَلَمٌ", "وَلَدٌ", "جَمَلٌ"], "a": 0, "s": 1}, {"ar": "أَيُّ كَلِمَةٍ تَحْتَوِي عَلَى مَدٍّ بِاليَاءِ (ee)؟ (Which word contains a long vowel Ya (ee)?)", "en": "", "o": ["بَابٌ", "سُوقٌ", "طَبِيبٌ", "كِتَابٌ"], "a": 2, "s": 1}, {"ar": "كَيْفَ تُنْطَقُ كَلِمَةُ (سُوقٌ)؟", "en": "How is the word سُوقٌ pronounced?", "o": ["Saa-qun", "See-qun", "Soo-qun", "Sa-wa-qun"], "a": 2, "s": 1}, {"ar": "أَيُّ كَلِمَةٍ تَحْتَوِي عَلَى شَدَّةٍ (ّ)؟ (Which word contains a Shaddah (ّ)?)", "en": "", "o": ["طَالِبٌ", "مُعَلِّمٌ", "مَكْتَبٌ", "كَبِيرٌ"], "a": 1, "s": 2}, {"ar": "كَيْفَ تُنْطَقُ كَلِمَةُ (مُعَلِّمٌ)؟", "en": "How is the word مُعَلِّمٌ pronounced?", "o": ["Ma-'a-li-mun", "Mu-'al-li-mun", "Mu-'aa-li-mun", "Mu-'al-la-mun"], "a": 1, "s": 2}, {"ar": "أَيُّ كَلِمَةٍ تَنْتَهِي بِتَنْوِينِ الفَتْحِ (ـًا)؟ (Which word ends with Tanween Fath (-an)?)", "en": "", "o": ["قَلَمٌ", "قَلَمٍ", "قَلَمًا", "القَلَمُ"], "a": 2, "s": 2}, {"ar": "فِي أَيِّ كَلِمَةٍ تُنْطَقُ اللَّامُ وَاضِحَةً (اللَّامُ القَمَرِيَّةُ)؟", "en": "In which word is the ل pronounced clearly — Moon Letter?", "o": ["الشَّمْسُ", "الطَّالِبُ", "القَمَرُ", "السَّيَّارَةُ"], "a": 2, "s": 2}, {"ar": "فِي أَيِّ كَلِمَةٍ لَا تُنْطَقُ اللَّامُ (اللَّامُ الشَّمْسِيَّةُ)؟", "en": "In which word is the ل silent — Sun Letter?", "o": ["البَيْتُ", "الكِتَابُ", "المَسْجِدُ", "النَّافِذَةُ"], "a": 3, "s": 2}, {"ar": "مَا التَّرْكِيبُ الصَّحِيحُ لِـ (ص + د + ي + ق)؟", "en": "What is the correct spelling of: ص + د + ي + ق?", "o": ["صَدِيقٌ", "ضَدِيقٌ", "صَدِيفٌ", "سَدِيقٌ"], "a": 0, "s": 3}, {"ar": "اِخْتَرِ النُّطْقَ الصَّحِيحَ لِكَلِمَةِ (مَدْرَسَةٌ):", "en": "Choose the correct pronunciation of مَدْرَسَةٌ:", "o": ["Mu-dar-ri-sa-tun", "Mad-ra-sa-tun", "Ma-daa-ri-sun", "Mid-ra-sa-tun"], "a": 1, "s": 3}, {"ar": "اِخْتَرِ العِبَارَةَ الَّتِي تُقْرَأُ: (A-naa Taa-li-bun)", "en": "Choose the Arabic phrase that reads: A-naa Taa-li-bun", "o": ["أَنَا طَبِيبٌ", "هُوَ طَالِبٌ", "أَنَا طَالِبٌ", "أَنْتَ طَالِبٌ"], "a": 2, "s": 3}, {"ar": "اِخْتَرِ العِبَارَةَ الَّتِي تُقْرَأُ: (Haa-dhaa Ki-taa-bun)", "en": "Choose the Arabic phrase that reads: Haa-dhaa Ki-taa-bun", "o": ["هَذَا كِتَابٌ", "هَذِهِ كُتُبٌ", "هَذَا مَكْتَبٌ", "هَذَا كَاتِبٌ"], "a": 0, "s": 3}, {"ar": "اِخْتَرِ النُّطْقَ الصَّحِيحَ لِلْجُمْلَةِ: (السَّلَامُ عَلَيْكُمْ)", "en": "Choose the correct pronunciation of السَّلَامُ عَلَيْكُمْ:", "o": ["Al-sa-laa-mu 'a-lay-kum", "As-sa-laa-mu 'a-lay-kum", "As-sa-la-mu 'a-la-kum", "Is-sa-laa-mu 'a-lay-kum"], "a": 1, "s": 3}]};
+var $=function(i){return document.getElementById(i)},L="أبجد",i=0,sel=-1,done=false,score=0,secScore=[0,0,0,0],answers=[],info={};
+function wl(s){return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/([A-Za-z][A-Za-z\u0027\- ]*[A-Za-z])/g,'<bdi dir="ltr">$1</bdi>')}
+function lat(s){return /^[A-Za-z]/.test(s)}
+document.getElementById("f0").addEventListener("submit",function(e){
+ e.preventDefault();
+ if($("gotcha").value)return;
+ info={name:$("name").value.trim(),contact:$("contact").value.trim(),country:$("country").value.trim()};
+ $("s1").hidden=true;$("s2").hidden=false;show();
+});
+function show(){
+ var q=D.qs[i];done=false;sel=-1;
+ $("pn").innerHTML="سؤال "+(i+1)+" من "+D.qs.length+" · <bdi dir=\"ltr\">Question "+(i+1)+" of "+D.qs.length+"</bdi>";
+ $("ps").textContent="";
+ $("pb").style.width=(i/D.qs.length*100)+"%";
+ $("sec").textContent=D.secs[q.s];
+ $("qt").innerHTML=wl(q.ar);$("qe").textContent=q.en;$("qe").hidden=!q.en;
+ var o=$("opts");o.innerHTML="";
+ q.o.forEach(function(t,k){
+  var l=document.createElement("label");l.className="opt"+(lat(t)?" lat":"");l.dataset.k=k;
+  var r=document.createElement("input");r.type="radio";r.name="q";r.value=k;
+  r.addEventListener("change",function(){sel=k;$("chk").disabled=false});
+  var s=document.createElement("span");s.textContent=L[k]+") "+t;
+  var m=document.createElement("span");m.className="mark";
+  l.appendChild(r);l.appendChild(s);l.appendChild(m);o.appendChild(l);
+ });
+ $("fb").textContent="";$("fb").className="fb";
+ $("chk").hidden=false;$("chk").disabled=true;$("nx").hidden=true;
+ $("nx").textContent=(i==D.qs.length-1)?"عرض النتيجة · See result":"التالي · Next";
+ $("qbox").querySelector("input")&&0;
+}
+$("chk").addEventListener("click",function(){
+ if(sel<0||done)return;done=true;
+ var q=D.qs[i],ok=(sel===q.a);
+ if(ok){score++;secScore[q.s]++}
+ answers.push((i+1)+":"+L[sel]+(ok?"✓":"✗(صحيح "+L[q.a]+")"));
+ var ls=$("opts").children;
+ for(var k=0;k<ls.length;k++){
+  ls[k].querySelector("input").disabled=true;
+  if(k===q.a){ls[k].classList.add("right");ls[k].querySelector(".mark").textContent="✔ صحيح"}
+  if(k===sel&&!ok){ls[k].classList.add("wrong");ls[k].querySelector(".mark").textContent="✖ خطأ"}
+ }
+ $("fb").className="fb "+(ok?"ok":"bad");
+ $("fb").textContent=ok?"✔ إجابة صحيحة · Correct":"✖ إجابة خاطئة · Incorrect. الصحيح: "+L[q.a]+") "+q.o[q.a];
+ $("chk").hidden=true;$("nx").hidden=false;$("nx").focus();
+});
+$("nx").addEventListener("click",function(){
+ if(i<D.qs.length-1){i++;show();window.scrollTo({top:0})}else finish();
+});
+function finish(){
+ $("s2").hidden=true;$("s3").hidden=false;window.scrollTo({top:0});
+ $("sc").textContent=score+" / "+D.qs.length;
+ var h="";D.secs.forEach(function(s,k){h+="<tr><td>"+s+"</td><td>"+secScore[k]+" / 5</td></tr>"});
+ $("tb").innerHTML=h;
+ send();
+}
+function send(){
+ var st=$("st");st.className="st";st.textContent="جارٍ إرسال نتيجتك… · Sending your result…";$("retry").hidden=true;
+ var f=new FormData();
+ f.append("form_type","placement_test");f.append("site_language","ar");
+ f.append("_subject","Placement test: "+info.name+" "+score+"/"+D.qs.length);
+ f.append("name",info.name);f.append("contact",info.contact);f.append("country",info.country);
+ f.append("score",score+"/"+D.qs.length);
+ D.secs.forEach(function(s,k){f.append("section_"+(k+1),secScore[k]+"/5")});
+ f.append("answers",answers.join(" | "));f.append("consent","yes");
+ fetch("https://formspree.io/f/xkjrjlkq",{method:"POST",body:f,headers:{Accept:"application/json"}}).then(function(r){
+  if(r.ok){st.className="st";st.textContent="✔ وصلت نتيجتك إلى الأستاذ. · Your result was sent."}
+  else fail();
+ }).catch(fail);
+ function fail(){st.className="st bad";st.textContent="تعذّر إرسال النتيجة الآن. أعد المحاولة، أو راسلني على واتساب. · Sending failed. Try again, or message me on WhatsApp.";$("retry").hidden=false}
+}
+$("rb").addEventListener("click",send);
+</script>
+<script data-goatcounter="https://ahmadaljendy.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+</body>
+</html>
