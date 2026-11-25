@@ -20,6 +20,13 @@ h1{font-family:"Amiri",serif;font-size:2rem;margin:8px 0 4px;color:var(--green);
 .fld{display:grid;gap:6px;margin-bottom:14px}.fld span{font-weight:600}
 .fld input{font:inherit;padding:10px 12px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);width:100%}
 .chk{display:flex;gap:10px;align-items:flex-start;margin:6px 0 16px}.chk input{margin-top:7px;width:18px;height:18px}
+.h2{font-family:"Amiri",serif;font-size:1.8rem;margin:0 0 2px;color:#1E2A33;line-height:1.4}
+@media (prefers-color-scheme:dark){.h2{color:var(--ink)}}
+.req{color:#D32F2F;margin-inline-end:4px}
+.fld input{border-radius:14px;padding:14px 16px;border-color:#C6D0DC}
+.fld input::placeholder{color:#8795A6;opacity:1}
+.btn.go{width:100%;display:flex;align-items:center;justify-content:center;gap:12px;font-size:1.2rem;padding:16px 26px;border-radius:16px;box-shadow:0 8px 18px rgba(13,70,54,.25);background:#0F5132}
+@media (prefers-color-scheme:dark){.btn.go{background:var(--green)}}
 .btn{font:inherit;font-weight:600;cursor:pointer;border:0;border-radius:10px;padding:12px 26px;background:var(--green);color:#fff;min-height:48px}
 @media (prefers-color-scheme:dark){.btn{color:#0B2A22}}
 .btn[disabled]{opacity:.5;cursor:not-allowed}
@@ -55,13 +62,15 @@ a{color:var(--green)}
 <p class="sub">٢٠ سؤالًا<br><span dir="ltr" style="unicode-bidi:isolate">Level placement test &middot; 20 questions</span></p>
 
 <section id="s1" class="card">
+<h2 class="h2">بَيَانَاتُ الطَّالِبِ</h2>
+<p class="en" style="margin-bottom:18px">Student Information (Required to view your result)</p>
 <form id="f0" autocomplete="on">
-<label class="fld"><span>الاسم الكامل (Full Name)</span><input id="name" type="text" required autocomplete="name"></label>
-<label class="fld"><span>البريد الإلكتروني أو واتساب (Email / WhatsApp)</span><input id="contact" type="text" required autocomplete="email"></label>
-<label class="fld"><span>البلد (Country)</span><input id="country" type="text" autocomplete="country-name"></label>
+<label class="fld"><span><b class="req" aria-hidden="true">*</b> الاِسْمُ الكَامِلُ <bdi dir="ltr">(Full Name)</bdi></span><input id="name" type="text" required autocomplete="name" placeholder="مثال: مُحَمَّد أَحْمَد / Mohammad Ahmad"></label>
+<label class="fld"><span><b class="req" aria-hidden="true">*</b> البَرِيدُ الإِلِكْتْرُونِيُّ أَوْ رَقْمُ وَاتْسَاب <bdi dir="ltr">(Email / WhatsApp)</bdi></span><input id="contact" type="text" required autocomplete="email" dir="ltr" placeholder="email@example.com or +20..."></label>
+<label class="fld"><span><b class="req" aria-hidden="true">*</b> البَلَدُ <bdi dir="ltr">(Country)</bdi></span><input id="country" type="text" required autocomplete="country-name" placeholder="مثال: مِصْر / السُّعُودِيَّة / UK"></label>
 <input type="text" id="gotcha" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
 <label class="chk"><input id="consent" type="checkbox" required><span>أوافق أن تُستخدم بياناتي ونتيجتي للتواصل معي بشأن مستواي فقط.<br><span class="note">I agree that my details and result may be used to contact me about my level only.</span></span></label>
-<button class="btn" type="submit">ابدأ الاختبار &middot; Start</button>
+<button class="btn go" type="submit"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg><span>اِبْدَأِ الاِخْتِبَارَ <bdi dir="ltr">(Start Test)</bdi></span></button>
 </form>
 </section>
 
@@ -83,6 +92,7 @@ a{color:var(--green)}
 <p class="st" id="st" role="status"></p>
 <div class="row" id="retry" hidden><button class="btn" id="rb" type="button">إعادة المحاولة &middot; Try again</button></div>
 </section>
+<p class="note" style="text-align:center;margin:26px 0 0">أ. أَحْمَد الجُنْدِي<br><span dir="ltr" style="unicode-bidi:isolate">Al-Arabiyya Bayna Yadayk · Placement Assessment</span></p>
 </div>
 
 <script>
