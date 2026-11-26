@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>اختبار قبول دورة الأجرومية | أحمد الجندي</title>
+<meta name="theme-color" content="#0D4636">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
+<style>
+:root{--bg:#F2F6F3;--surface:#fff;--ink:#0F2420;--muted:#4B605A;--line:#D3DFD8;--green:#0D4636;--ok:#0D6B3A;--bad:#B3261E;--gold:#D7B45B}
+@media (prefers-color-scheme:dark){:root{--bg:#07151A;--surface:#0E2128;--ink:#E7EFEB;--muted:#9BB1AA;--line:#1D3A41;--green:#D7B45B;--ok:#6FD39A;--bad:#FF8F85}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"IBM Plex Sans Arabic","Noto Sans Arabic","Segoe UI",system-ui,sans-serif;font-size:18px;line-height:1.7}
+.wrap{max-width:720px;margin:0 auto;padding:24px 16px 64px}
+h1{font-family:"Amiri",serif;font-size:2rem;margin:8px 0 4px;color:var(--green);line-height:1.3}
+.sub{color:var(--muted);margin:0 0 20px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px}
+.fld{display:grid;gap:6px;margin-bottom:14px}.fld span{font-weight:600}
+.fld input{font:inherit;padding:10px 12px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);width:100%}
+.chk{display:flex;gap:10px;align-items:flex-start;margin:6px 0 16px}.chk input{margin-top:7px;width:18px;height:18px}
+.h2{font-family:"Amiri",serif;font-size:1.8rem;margin:0 0 2px;color:#1E2A33;line-height:1.4}
+@media (prefers-color-scheme:dark){.h2{color:var(--ink)}}
+.req{color:#D32F2F;margin-inline-end:4px}
+.fld input{border-radius:14px;padding:14px 16px;border-color:#C6D0DC}
+.fld input::placeholder{color:#8795A6;opacity:1}
+.btn.go{width:100%;display:flex;align-items:center;justify-content:center;gap:12px;font-size:1.2rem;padding:16px 26px;border-radius:16px;box-shadow:0 8px 18px rgba(13,70,54,.25);background:#0F5132}
+@media (prefers-color-scheme:dark){.btn.go{background:var(--green)}}
+.btn{font:inherit;font-weight:600;cursor:pointer;border:0;border-radius:10px;padding:12px 26px;background:var(--green);color:#fff;min-height:48px}
+@media (prefers-color-scheme:dark){.btn{color:#0B2A22}}
+.btn[disabled]{opacity:.5;cursor:not-allowed}
+.hp{position:absolute;inset-inline-start:-9999px;width:1px;height:1px;opacity:0}
+.prog{display:flex;justify-content:space-between;color:var(--muted);font-size:.95rem;margin-bottom:8px}
+.bar{height:8px;background:var(--line);border-radius:99px;overflow:hidden;margin-bottom:18px}.bar i{display:block;height:100%;background:var(--green);width:0;transition:width .3s}
+.sec{font-weight:600;color:var(--green);margin-bottom:6px}
+fieldset{border:0;margin:0;padding:0}
+legend{padding:0;font-size:1.25rem;font-weight:600;line-height:1.7;margin-bottom:4px}
+.en{color:var(--muted);font-size:1rem;direction:ltr;text-align:left;margin:0 0 14px}
+.opts{display:grid;gap:10px}
+.opt{display:flex;align-items:center;gap:12px;border:2px solid var(--line);border-radius:10px;padding:10px 14px;cursor:pointer;min-height:52px;font-size:1.3rem}
+.opt input{width:20px;height:20px;flex:none}
+.opt.lat{direction:ltr}
+.opt:has(input:checked){border-color:var(--green)}
+.opt.right{border-color:var(--ok);background:color-mix(in srgb,var(--ok) 12%,transparent)}
+.opt.wrong{border-color:var(--bad);background:color-mix(in srgb,var(--bad) 12%,transparent)}
+.mark{margin-inline-start:auto;font-weight:700;font-size:1rem}
+.fb{margin:16px 0 0;font-weight:600;min-height:1.7em}.fb.ok{color:var(--ok)}.fb.bad{color:var(--bad)}
+.row{display:flex;gap:12px;margin-top:18px;flex-wrap:wrap}
+.score{font-family:"Amiri",serif;font-size:3rem;color:var(--green);margin:4px 0;direction:ltr;text-align:start;unicode-bidi:isolate}
+table{width:100%;border-collapse:collapse;margin:14px 0}td{padding:8px 4px;border-bottom:1px solid var(--line)}td:last-child{text-align:end;font-weight:600;white-space:nowrap;direction:ltr;unicode-bidi:isolate}
+.note{color:var(--muted);font-size:.95rem}
+.st{font-weight:600;min-height:1.6em}.st.bad{color:var(--bad)}
+a{color:var(--green)}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+[hidden]{display:none!important}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>اختبار قبول دورة «مَتْنِ الآجُرُّومِيَّةِ»</h1>
+<p class="sub">قِيَاسُ الجَاهِزِيَّةِ اللُّغَوِيَّةِ وَالنَّحْوِيَّةِ قَبْلَ دِرَاسَةِ المَتْنِ (المُسْتَوَى المُتَوَسِّطُ) · ٢٠ سؤالًا<br><span dir="ltr" style="unicode-bidi:isolate">Ajurrumiyyah admission test &middot; 20 questions</span></p>
+
+<section id="s1" class="card">
+<h2 class="h2">بَيَانَاتُ الطَّالِبِ</h2>
+<p class="en" style="margin-bottom:18px">Student Information (Required to view your result)</p>
+<form id="f0" autocomplete="on">
+<label class="fld"><span><b class="req" aria-hidden="true">*</b> الاِسْمُ الكَامِلُ <bdi dir="ltr">(Full Name)</bdi></span><input id="name" type="text" required autocomplete="name" placeholder="مثال: مُحَمَّد أَحْمَد / Mohammad Ahmad"></label>
+<label class="fld"><span><b class="req" aria-hidden="true">*</b> البَرِيدُ الإِلِكْتْرُونِيُّ أَوْ رَقْمُ وَاتْسَاب <bdi dir="ltr">(Email / WhatsApp)</bdi></span><input id="contact" type="text" required autocomplete="email" dir="ltr" placeholder="email@example.com or +20..."></label>
+<label class="fld"><span><b class="req" aria-hidden="true">*</b> البَلَدُ <bdi dir="ltr">(Country)</bdi></span><input id="country" type="text" required autocomplete="country-name" placeholder="مثال: مِصْر / السُّعُودِيَّة / UK"></label>
+<input type="text" id="gotcha" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+<label class="chk"><input id="consent" type="checkbox" required><span>أوافق أن تُستخدم بياناتي ونتيجتي للتواصل معي بشأن مستواي فقط.<br><span class="note">I agree that my details and result may be used to contact me about my level only.</span></span></label>
+<button class="btn go" type="submit"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg><span>اِبْدَأِ الاِخْتِبَارَ <bdi dir="ltr">(Start Test)</bdi></span></button>
+</form>
+</section>
+
+<section id="s2" class="card" hidden>
+<div class="prog"><span id="pn"></span><span id="ps"></span></div>
+<div class="bar" aria-hidden="true"><i id="pb"></i></div>
+<div class="sec" id="sec"></div>
+<div id="ps2" hidden style="background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin-bottom:16px"><p class="note" id="pi" style="margin:0 0 6px"></p><p id="pt" style="margin:0;font-size:1.25rem;line-height:2"></p></div>
+<fieldset id="qbox"><legend id="qt"></legend><p class="en" id="qe"></p><div class="opts" id="opts"></div></fieldset>
+<p class="fb" id="fb" role="status" aria-live="polite"></p>
+<div class="row"><button class="btn" id="chk" type="button">تحقّق &middot; Check</button><button class="btn" id="nx" type="button" hidden>التالي &middot; Next</button></div>
+</section>
+
+<section id="s3" class="card" hidden aria-live="polite">
+<p>درجتك &middot; Your score</p>
+<div class="score" id="sc"></div>
+<table id="tb"></table>
+<div id="msg" style="background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:0 0 14px"><p id="msga" style="margin:0 0 6px;font-size:1.15rem"></p><p id="msge" class="note" dir="ltr" style="margin:0;text-align:left"></p></div>
+<p>سأتواصل معك لنتفق على المستوى المناسب لك.<br><span class="note">I will contact you to agree on the level that suits you.</span></p>
+<p class="st" id="st" role="status"></p>
+<div class="row" id="retry" hidden><button class="btn" id="rb" type="button">إعادة المحاولة &middot; Try again</button></div>
+</section>
+<p class="note" style="text-align:center;margin:26px 0 0">أ. أَحْمَد الجُنْدِي<br><span dir="ltr" style="unicode-bidi:isolate">Matn al-Ajurrumiyyah · Admission Test</span></p>
+</div>
+
+<script>
+var D={"secs": ["الوَعْيُ الصَّرْفِيُّ وَالثَّرْوَةُ اللُّغَوِيَّةُ", "بِنْيَةُ الجُمْلَةِ وَالتَّرَاكِيبُ", "السَّلَامَةُ اللُّغَوِيَّةُ وَتَمْيِيزُ الصَّوَابِ", "فَهْمُ النَّصِّ الفَصِيحِ وَالاِسْتِيعَابُ"], "qs": [{"ar": "مَا الأَصْلُ الثُّلَاثِيُّ (الجَذْرُ) لِكَلِمَةِ «اِسْتِخْرَاجٌ»؟", "en": "What is the 3-letter root of اِسْتِخْرَاجٌ?", "o": ["سَخَرَ", "خَرَجَ", "أَخْرَجَ", "تَخَرَّجَ"], "a": 1, "s": 0}, {"ar": "أَيُّ كَلِمَةٍ مِنَ الكَلِمَاتِ التَّالِيَةِ تَدُلُّ عَلَى «مَنْ قَامَ بِالفِعْلِ» (اِسْمُ فَاعِلٍ)؟", "en": "Which word refers to the doer of the action?", "o": ["مَكْتُوبٌ", "مَكْتَبَةٌ", "كَاتِبٌ", "كِتَابَةٌ"], "a": 2, "s": 0}, {"ar": "مَا الجَمْعُ الصَّحِيحُ لِكَلِمَةِ «قَاعِدَةٌ»؟", "en": "What is the correct plural of قَاعِدَةٌ?", "o": ["قَاعِدُونَ", "قَوَاعِدُ", "قُعُودٌ", "مَقَاعِدُ"], "a": 1, "s": 0}, {"ar": "مَا الفَرْقُ فِي المَعْنَى بَيْنَ «عَلِمَ» وَ«عَلَّمَ»؟", "en": "What is the difference in meaning between عَلِمَ and عَلَّمَ?", "o": ["«عَلِمَ» بِمَعْنَى عَرَفَ، وَ«عَلَّمَ» بِمَعْنَى دَرَّسَ غَيْرَهُ.", "«عَلِمَ» لِلْمَاضِي، وَ«عَلَّمَ» لِلْمُضَارِعِ.", "«عَلِمَ» لِلْمُفْرَدِ، وَ«عَلَّمَ» لِلْجَمْعِ.", "لَا فَرْقَ بَيْنَهُمَا فِي المَعْنَى."], "a": 0, "s": 0}, {"ar": "مَا مَعْنَى كَلِمَةِ «يَقْتَصِرُ» فِي جُمْلَةِ: «لَا يَقْتَصِرُ النَّحْوُ عَلَى حِفْظِ القَوَاعِدِ»؟", "en": "What does يَقْتَصِرُ mean here?", "o": ["يَبْتَعِدُ", "يَنْحَصِرُ وَيَتَوَقَّفُ", "يَزِيدُ وَيَكْثُرُ", "يَسْهُلُ وَيَلِينُ"], "a": 1, "s": 0}, {"ar": "فِي جُمْلَةِ: «أَكْرَمَ الطَّالِبَ المُعَلِّمُ»، مَنِ الَّذِي قَامَ بِالإِكْرَامِ؟", "en": "Who performed the honoring in this sentence?", "o": ["الطَّالِبُ", "المُعَلِّمُ", "كِلَاهُمَا", "الفَاعِلُ مَحْذُوفٌ"], "a": 1, "s": 1}, {"ar": "أَيُّ جُمْلَةٍ مِمَّا يَلِي تَحْتَوِي عَلَى تَرْكِيبِ «إِضَافَةٍ» (مُضَافٍ وَمُضَافٍ إِلَيْهِ)؟", "en": "Which sentence contains an Idafah structure?", "o": ["قَرَأْتُ كِتَابًا مُفِيدًا.", "هَذَا كِتَابُ النَّحْوِ.", "الكِتَابُ جَدِيدٌ وَنَافِعٌ.", "فِي الكِتَابِ فَوَائِدُ كَثِيرَةٌ."], "a": 1, "s": 1}, {"ar": "اِخْتَرِ الاِسْمَ المَوْصُولَ الصَّحِيحَ: «أُعْجِبْتُ بِالطُّلَّابِ ............. يَجْتَهِدُونَ فِي طَلَبِ العِلْمِ.»", "en": "", "o": ["الَّذِي", "الَّتِي", "الَّذِينَ", "اللَّاتِي"], "a": 2, "s": 1}, {"ar": "فِي جُمْلَةِ: «لَمْ يَحْضُرْ خَالِدٌ أَمْسِ، وَلَنْ يَحْضُرَ غَدًا»، مَا زَمَنُ الفِعْلِ الأَوَّلِ وَالثَّانِي؟", "en": "", "o": ["الأَوَّلُ لِلْمَاضِي، وَالثَّانِي لِلْمُسْتَقْبَلِ.", "الأَوَّلُ لِلْحَاضِرِ، وَالثَّانِي لِلْمَاضِي.", "كِلَاهُمَا لِلْمُسْتَقْبَلِ.", "كِلَاهُمَا لِلْمَاضِي."], "a": 0, "s": 1}, {"ar": "فِي جُمْلَةِ: «سَأَلْتُ الأُسْتَاذَ عَنِ المَسْأَلَةِ فَأَجَابَنِي»، الضَّمِيرُ (اليَاءُ) فِي «أَجَابَنِي» يَعُودُ عَلَى:", "en": "", "o": ["الأُسْتَاذِ", "المَسْأَلَةِ", "المُتَكَلِّمِ (أَنَا)", "المُخَاطَبِ (أَنْتَ)"], "a": 2, "s": 1}, {"ar": "أَيُّ جُمْلَةٍ مِنَ الجُمَلِ التَّالِيَةِ صَحِيحَةٌ نَحْوِيًّا؟", "en": "Which sentence is grammatically correct?", "o": ["كَانَ الطَّالِبُ مُجْتَهِدٌ.", "كَانَ الطَّالِبُ مُجْتَهِدًا.", "كَانَ الطَّالِبَ مُجْتَهِدٌ.", "كَانَ الطَّالِبِ مُجْتَهِدًا."], "a": 1, "s": 2}, {"ar": "أَيُّ جُمْلَةٍ مِنَ الجُمَلِ التَّالِيَةِ صَحِيحَةٌ نَحْوِيًّا؟", "en": "Which sentence is grammatically correct?", "o": ["إِنَّ العِلْمُ نُورٌ.", "إِنَّ العِلْمَ نُورٌ.", "إِنَّ العِلْمِ نُورًا.", "إِنَّ العِلْمُ نُورًا."], "a": 1, "s": 2}, {"ar": "اِخْتَرِ الكَلِمَةَ الصَّحِيحَةَ لِمَلْءِ الفَرَاغِ: «سَلَّمْتُ عَلَى ............. فِي المَسْجِدِ.»", "en": "", "o": ["المُسْلِمُونَ", "المُسْلِمِينَ", "المُسْلِمَانِ", "المُسْلِمُ"], "a": 1, "s": 2}, {"ar": "اِخْتَرِ الكَلِمَةَ الصَّحِيحَةَ لِمَلْءِ الفَرَاغِ: «حَضَرَ ............. إِلَى قَاعَةِ الدَّرْسِ مُبَكِّرَيْنِ.»", "en": "", "o": ["الطَّالِبَيْنِ", "الطَّالِبَانِ", "الطَّالِبُ", "الطُّلَّابُ"], "a": 1, "s": 2}, {"ar": "اِخْتَرِ الفِعْلَ المَضْبُوطَ ضَبْطًا صَحِيحًا: «لَا ............. عَنْ مَوْعِدِ الدَّرْسِ يَا أَخِي.»", "en": "", "o": ["تَتَأَخَّرُ", "تَتَأَخَّرَ", "تَتَأَخَّرْ", "تَتَأَخَّرِ"], "a": 2, "s": 2}, {"ar": "مَا المَقْصُودُ بِكَلِمَةِ «اللَّحْنِ» فِي النَّصِّ؟", "en": "", "o": ["النَّغَمُ وَالصَّوْتُ الجَمِيلُ", "الخَطَأُ فِي النُّطْقِ وَالإِعْرَابِ", "السُّرْعَةُ فِي القِرَاءَةِ", "كَثْرَةُ الكَلَامِ"], "a": 1, "s": 3}, {"ar": "الضَّمِيرُ (الهَاءُ) فِي كَلِمَةِ «أُصُولَهُ» يَعُودُ عَلَى:", "en": "", "o": ["اللُّغَةِ العَرَبِيَّةِ", "عِلْمِ النَّحْوِ", "العُلَمَاءِ", "المِيزَانِ"], "a": 1, "s": 3}, {"ar": "لِمَاذَا أَقْبَلَ طُلَّابُ العِلْمِ عَلَى «المُقَدِّمَةِ الآجُرُّومِيَّةِ»؟", "en": "", "o": ["لِأَنَّهَا أَطْوَلُ كِتَابٍ فِي النَّحْوِ", "لِوُضُوحِ عِبَارَتِهَا وَحُسْنِ تَرْتِيبِهَا", "لِأَنَّهَا تَحْتَوِي عَلَى قِصَصٍ أَدَبِيَّةٍ", "لِأَنَّهَا تَهْتَمُّ بِالشِّعْرِ فَقَطْ"], "a": 1, "s": 3}, {"ar": "مَا الثَّمَرَةُ الَّتِي ذَكَرَهَا النَّصُّ لِمَنْ أَتْقَنَ «الآجُرُّومِيَّةَ»؟", "en": "", "o": ["يَصِيرُ شَاعِرًا مَشْهُورًا", "يَنْفَتِحُ لَهُ بَابُ فَهْمِ القُرْآنِ وَالسُّنَّةِ وَالتُّرَاثِ", "يَحْفَظُ جَمِيعَ مَعَاجِمِ اللُّغَةِ", "يَسْتَغْنِي عَنْ دِرَاسَةِ الصَّرْفِ"], "a": 1, "s": 3}, {"ar": "كَلِمَةُ «مُخْتَصَرَاتٍ» فِي النَّصِّ تَعْنِي:", "en": "", "o": ["كُتُبًا مُوجَزَةً تَجْمَعُ الأَسَاسِيَّاتِ", "كُتُبًا ضَخْمَةً فِي عِدَّةِ مُجَلَّدَاتٍ", "أَسْئِلَةً صَعْبَةً لِلاِخْتِبَارِ", "رَسَائِلَ شَخْصِيَّةً بَيْنَ العُلَمَاءِ"], "a": 0, "s": 3}], "passage": "يُعَدُّ عِلْمُ النَّحْوِ مِيزَانَ اللُّغَةِ العَرَبِيَّةِ وَحَارِسَهَا مِنَ اللَّحْنِ وَالخَطَأِ. وَلِهَذَا اِهْتَمَّ العُلَمَاءُ بِتَأْلِيفِ مُخْتَصَرَاتٍ تَجْمَعُ أُصُولَهُ لِلْمُبْتَدِئِينَ، وَمِنْ أَشْهَرِهَا «المُقَدِّمَةُ الآجُرُّومِيَّةُ» الَّتِي أَلَّفَهَا اِبْنُ آجُرُّومَ الصَّنْهَاجِيُّ. وَقَدْ أَقْبَلَ عَلَيْهَا طُلَّابُ العِلْمِ فِي كُلِّ عَصْرٍ؛ لِوُضُوحِ عِبَارَتِهَا، وَحُسْنِ تَرْتِيبِهَا، وَلِأَنَّ مَنْ أَتْقَنَهَا اِنْفَتَحَ لَهُ بَابُ فَهْمِ القُرْآنِ وَالسُّنَّةِ وَكُتُبِ التُّرَاثِ.", "instr": "اِقْرَأِ النَّصَّ التَّالِيَ بِتَمَعُّنٍ، ثُمَّ أَجِبْ عَنِ الأَسْئِلَةِ:"};
+var B=[{"min": 15, "ar": "مَقْبُولٌ مُبَاشَرَةً فِي دَوْرَةِ «مَتْنِ الآجُرُّومِيَّةِ» (يَمْتَلِكُ الأَسَاسَ اللُّغَوِيَّ وَالنَّحْوِيَّ المُتَوَسِّطَ الكَافِيَ).", "en": "Accepted directly into the course on Matn al-Ajurrumiyyah (you have a sufficient intermediate language and grammar foundation).", "tag": "15-20"}, {"min": 11, "ar": "مَقْبُولٌ بِشَرْطِ مُرَاجَعَةِ مُقَدِّمَاتِ النَّحْوِ وَالتَّرَاكِيبِ فِي الحِصَصِ الأُولَى.", "en": "Accepted on condition that you review the grammar introductions and sentence structures in the first sessions.", "tag": "11-14"}, {"min": 0, "ar": "غَيْرُ مُؤَهَّلٍ حَالِيًّا لِلْآجُرُّومِيَّةِ؛ يُنْصَحُ بِإِتْمَامِ الكِتَابِ الثَّانِي مِنْ «العَرَبِيَّةُ بَيْنَ يَدَيْكَ» أَوَّلًا.", "en": "Not yet ready for al-Ajurrumiyyah; we recommend completing Level 2 of Al-Arabiyya Bayna Yadayk first.", "tag": "0-10"}];
+var $=function(i){return document.getElementById(i)},L="أبجد",i=0,sel=-1,done=false,score=0,secScore=[0,0,0,0],answers=[],info={},band="";
+function wl(s){return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/([A-Za-z][A-Za-z\u0027\- ]*[A-Za-z])/g,'<bdi dir="ltr">$1</bdi>')}
+function lat(s){return /^[A-Za-z]/.test(s)}
+document.getElementById("f0").addEventListener("submit",function(e){
+ e.preventDefault();
+ if($("gotcha").value)return;
+ info={name:$("name").value.trim(),contact:$("contact").value.trim(),country:$("country").value.trim()};
+ $("s1").hidden=true;$("s2").hidden=false;show();
+});
+function show(){
+ var q=D.qs[i];done=false;sel=-1;
+ $("pn").innerHTML="سؤال "+(i+1)+" من "+D.qs.length+" · <bdi dir=\"ltr\">Question "+(i+1)+" of "+D.qs.length+"</bdi>";
+ $("ps").textContent="";
+ $("pb").style.width=(i/D.qs.length*100)+"%";
+ $("sec").textContent=D.secs[q.s];
+ $("ps2").hidden=(q.s!==3);$("pi").textContent=D.instr;$("pt").textContent=D.passage;
+ $("qt").innerHTML=wl(q.ar);$("qe").textContent=q.en;$("qe").hidden=!q.en;
+ var o=$("opts");o.innerHTML="";
+ q.o.forEach(function(t,k){
+  var l=document.createElement("label");l.className="opt"+(lat(t)?" lat":"");l.dataset.k=k;
+  var r=document.createElement("input");r.type="radio";r.name="q";r.value=k;
+  r.addEventListener("change",function(){sel=k;$("chk").disabled=false});
+  var s=document.createElement("span");s.textContent=L[k]+") "+t;
+  var m=document.createElement("span");m.className="mark";
+  l.appendChild(r);l.appendChild(s);l.appendChild(m);o.appendChild(l);
+ });
+ $("fb").textContent="";$("fb").className="fb";
+ $("chk").hidden=false;$("chk").disabled=true;$("nx").hidden=true;
+ $("nx").textContent=(i==D.qs.length-1)?"عرض النتيجة · See result":"التالي · Next";
+ $("qbox").querySelector("input")&&0;
+}
+$("chk").addEventListener("click",function(){
+ if(sel<0||done)return;done=true;
+ var q=D.qs[i],ok=(sel===q.a);
+ if(ok){score++;secScore[q.s]++}
+ answers.push((i+1)+":"+L[sel]+(ok?"✓":"✗(صحيح "+L[q.a]+")"));
+ var ls=$("opts").children;
+ for(var k=0;k<ls.length;k++){
+  ls[k].querySelector("input").disabled=true;
+  if(k===q.a){ls[k].classList.add("right");ls[k].querySelector(".mark").textContent="✔ صحيح"}
+  if(k===sel&&!ok){ls[k].classList.add("wrong");ls[k].querySelector(".mark").textContent="✖ خطأ"}
+ }
+ $("fb").className="fb "+(ok?"ok":"bad");
+ $("fb").textContent=ok?"✔ إجابة صحيحة · Correct":"✖ إجابة خاطئة · Incorrect. الصحيح: "+L[q.a]+") "+q.o[q.a];
+ $("chk").hidden=true;$("nx").hidden=false;$("nx").focus();
+});
+$("nx").addEventListener("click",function(){
+ if(i<D.qs.length-1){i++;show();window.scrollTo({top:0})}else finish();
+});
+function finish(){
+ $("s2").hidden=true;$("s3").hidden=false;window.scrollTo({top:0});
+ $("sc").textContent=score+" / "+D.qs.length;
+ var h="";D.secs.forEach(function(s,k){h+="<tr><td>"+s+"</td><td>"+secScore[k]+" / 5</td></tr>"});
+ $("tb").innerHTML=h;
+ var bd=B.filter(function(b){return score>=b.min})[0];if(bd){$("msga").textContent=bd.ar;$("msge").textContent=bd.en;band=bd.tag}else{$("msg").hidden=true}
+ send();
+}
+function send(){
+ var st=$("st");st.className="st";st.textContent="جارٍ إرسال نتيجتك… · Sending your result…";$("retry").hidden=true;
+ var f=new FormData();
+ f.append("form_type","ajurrumiyyah_test");f.append("site_language","ar");
+ f.append("_subject","Ajurrumiyyah test: "+info.name+" "+score+"/"+D.qs.length);
+ f.append("name",info.name);f.append("contact",info.contact);f.append("country",info.country);
+ f.append("score",score+"/"+D.qs.length);
+ D.secs.forEach(function(s,k){f.append("section_"+(k+1),secScore[k]+"/5")});
+ f.append("result_band",band);f.append("answers",answers.join(" | "));f.append("consent","yes");
+ fetch("https://formspree.io/f/xkjrjlkq",{method:"POST",body:f,headers:{Accept:"application/json"}}).then(function(r){
+  if(r.ok){st.className="st";st.textContent="✔ وصلت نتيجتك إلى الأستاذ. · Your result was sent."}
+  else fail();
+ }).catch(fail);
+ function fail(){st.className="st bad";st.textContent="تعذّر إرسال النتيجة الآن. أعد المحاولة، أو راسلني على واتساب. · Sending failed. Try again, or message me on WhatsApp.";$("retry").hidden=false}
+}
+$("rb").addEventListener("click",send);
+</script>
+<script data-goatcounter="https://ahmadaljendy.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+</body>
+</html>
